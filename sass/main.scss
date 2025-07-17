@@ -1,0 +1,12 @@
+// Importamos en orden lógico
+@import "base/reset";
+@import "base/fonts";
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/globals";
+
+@import "layout/header";
+@import "layout/home";
+@import "layout/footer";
+

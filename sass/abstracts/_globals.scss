@@ -1,0 +1,16 @@
+body.dark-mode {
+    background-color: $dark-background-color;
+    color: $dark-text-color;
+}
+
+body {
+    font-family: $sc-font-family, sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid $text-color;
+    margin: 2rem 0;
+}

@@ -1,0 +1,13 @@
+.sc-footer {
+    background: $dark-background-color;
+    color: $dark-text-color;
+    padding: 1.5rem 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    font-family: $sc-font-family;
+    letter-spacing: .1rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+}

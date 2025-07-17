@@ -1,0 +1,407 @@
+#weather {
+    background-color: $weather-color;
+    font-family: $sc-font-family;
+    @include sc-font(700);
+    text-align: center;
+    padding: 2%;
+}
+
+.sc-slider {
+    position: relative; // Permite que los elementos hijos se posicionen sobre el slider
+
+
+    &__img {
+        object-fit: cover; // Ajusta las imágenes para que no se deformen
+        height: 415px;
+    }
+
+    &__content {
+        position: absolute; // Posiciona el contenido sobre el slider
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // Centra el contenido perfectamente
+        text-align: center; // Alinea el texto
+        color: white;
+        z-index: 2; // Asegura que el contenido esté por encima de las imágenes
+    }
+
+    h1 {
+        @include sc-font(700);
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); // Efecto para mejor legibilidad
+    }
+
+    &__cta {
+        padding: 10px 20px;
+        background: #f39c12;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: darken(#f39c12, 10%);
+            transition: background 0.3s ease;
+            @include sc-font(600);
+        }
+    }
+
+    &__controls {
+        button {
+            background: $text-color;
+            border: none;
+            transition: background 0.3s ease;
+
+            &:hover {
+                background: $text-color;
+            }
+        }
+    }
+
+    .carousel-indicators button {
+        background-color: $hover-color; // Color de los indicadores
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+
+        &.active {
+            background-color: #f39c12; // Color activo
+        }
+    }
+}
+
+.sc-soldout {
+    text-align: center;
+    padding: 4rem 1rem;
+
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        color: $text-color;
+        max-width: 700px;
+        margin-inline: auto;
+    }
+
+    &__cta {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 1px;
+        transition: background 0.3s ease;
+
+        &:hover {
+            @include sc-font(600);
+            background: darken($text-color, 10%);
+            color: $dark-text-color;
+        }
+    }
+
+    &__stats {
+        display: flex;
+        justify-content: center;
+        align-items: stretch; // Fuerza que todas las tarjetas tengan la misma altura
+        gap: 3rem;
+        margin-top: 4rem;
+        flex-wrap: wrap;
+    }
+
+    &__stat {
+        display: flex;
+        flex-direction: column; // Apila todo verticalmente
+        justify-content: space-between; // Reparte los elementos
+        align-items: center; // Centra todo horizontalmente
+        text-align: center;
+        width: 200px; // Tamaño fijo para todos
+        min-height: 100px; // Asegura que todos tengan la misma altura
+
+        img {
+            width: 60px;
+        }
+
+        span {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    }
+
+    &__number {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+.sc-onsale {
+    padding: 1.5rem 1.2rem 0.5rem 0.5rem;
+    text-align: center;
+
+    &__title {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(234px, 1fr));
+        gap: 2rem;
+        justify-items: center;
+    }
+
+    &__item {
+        width: 234px;
+        height: 333px;
+        border-radius: 1rem;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            justify-content: center;
+        }
+
+        h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        span {
+            display: block;
+            font-size: 1rem;
+            color: $secondary-color;
+        }
+    }
+
+    &__like {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: $secondary-color;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}
+
+.sc-help {
+    padding: 0 0 2rem 0;
+    text-align: center;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        font-size: 1rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $hover-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+.sc-contact-form {
+    display: flex; // Flexbox para centrar
+    justify-content: center; // Centra horizontalmente
+    align-items: center; // Centra verticalmente
+    flex-direction: column; // Para mantener el contenido en columna
+    text-align: center;
+
+    h2 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+
+    form {
+        display: grid;
+        gap: 1rem;
+        max-width: 500px;
+        margin: 0 auto;
+        width: 100%; // Para asegurarse de que ocupe todo el ancho posible
+    }
+
+    label {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .form-control {
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: $hover-color;
+            box-shadow: 0 0 8px rgba($hover-color, 0.5);
+        }
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 1px;
+        transition: background 0.3s ease;
+
+        &:hover {
+            @include sc-font(600);
+            background: darken($text-color, 10%);
+            color: $dark-text-color;
+        }
+    }
+}
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 1000;
+    background: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+
+    &:hover {
+        background: darken(#25d366, 10%);
+    }
+}
+
+
+.sc-floating {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0.8rem;
+  
+    &__btn {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+  
+      &:hover {
+        transform: rotate(45deg);
+      }
+    }
+  
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      opacity: 0; // Oculto por defecto
+      transform: translateY(20px); // Baja los iconos para la animación
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      pointer-events: none; // Evita que se pueda clicar si está oculto
+    }
+  
+    &__link {
+      
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s ease, transform 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  
+    &--active {
+      .sc-floating__menu {
+        opacity: 1;
+        transform: translateY(0); // Sube los iconos
+        pointer-events: all; // Permite la interacción
+      }
+    }
+  }
+  
+  
+
+.sc-contact__title {
+    font-size: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+.sc-contact-banners {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+
+    &__item {
+      padding: 1rem 2rem;
+      border: 1px solid $hover-color;
+      border-radius: 0.5rem;
+      transition: transform 0.3s ease, background 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.05);
+        background: rgba($hover-color, 0.1);
+        cursor: pointer;
+      }
+    }
+  }

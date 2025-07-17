@@ -1,0 +1,4 @@
+@mixin sc-font($weight: 400) {
+    font-family: $sc-font-family;
+    font-weight: $weight;
+}

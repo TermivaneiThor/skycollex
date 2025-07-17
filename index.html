@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="SkyCollex - Tienda especializada en figuras de Skylanders para coleccionistas. Descubre figuras raras, compatibilidad entre juegos y productos personalizados." />
+  <meta name="keywords"
+    content="Skylanders, figuras coleccionables, figuras raras, compatibilidad, SkyCollex, tienda Skylanders, productos personalizados" />
+  <meta name="author" content="SkyCollex" />
+  <title>SkyCollex - Descubre. Colecciona. Conquista.</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="icons/CamoSticker-scaled.webp" type="image/x-icon">
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="sc-aviso">
+    <span>Retraso en el envío:</span>
+    Es posible que los pedidos realizados hoy no se envíen hasta DESPUÉS del 6
+    de marzo.
+  </div>
+  <header class="sc-header sticky-top sc-dark-mode">
+    <nav class="sc-header__navbar navbar navbar-expand-lg">
+      <div class="container sc-header__container">
+        <a class="sc-header__brand navbar-brand" href="#top">SkyCollex</a>
+        <button class="sc-header__toggle navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="sc-header__collapse collapse navbar-collapse" id="navbarNav">
+          <ul class="sc-header__menu navbar-nav ms-auto">
+            <button onclick="toggleDarkMode()">
+              <img src="icons/dark-mode_10016790.webp" alt="" />
+            </button>
+            <li class="sc-header__item nav-item">
+              <a class="sc-header__link nav-link" href="#top">Inicio</a>
+            </li>
+            <li class="sc-header__item nav-item sc-header__dropdown">
+              <a class="sc-header__link nav-link" href="#">Categorías</a>
+              <ul class="sc-header__submenu">
+                <li><a href="figuras.html">Figuras</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="portales.html">Portales</a></li>
+              </ul>
+            </li>
+            <li class="sc-header__item nav-item">
+              <a class="sc-header__link nav-link" href="#producto">Productos</a>
+            </li>
+            <li class="sc-header__item nav-item">
+              <a class="sc-header__link nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="weather">Cargando clima...</div>
+
+  <main>
+    <div id="carouselExampleIndicators" class="carousel slide sc-slider" data-bs-ride="carousel">
+      <div class="sc-slider__content">
+        <h1 class="sc-slider__title">Bienvenido Maestro del Portal !</h1>
+        <a href="#producto" class="sc-slider__cta btn btn-primary">Descubre. Colecciona. Conquista.</a>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/IMG_4688.webp" class="d-block w-100 sc-slider__img" alt="Primera imagen" />
+        </div>
+        <div class="carousel-item">
+          <img src="https://m.media-amazon.com/images/I/91qQLkPtQ7L.jpg" class="d-block w-100 sc-slider__img"
+            alt="Segunda imagen" />
+        </div>
+        <div class="carousel-item">
+          <img src="images/Skylanders_Collection.webp" class="d-block w-100 sc-slider__img" alt="Tercera imagen" />
+        </div>
+      </div>
+
+      <button class="carousel-control-prev sc-slider__controls" type="button"
+        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next sc-slider__controls" type="button"
+        data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+
+    <section class="sc-soldout">
+      <div class="sc-soldout__content">
+        <h2 class="sc-soldout__title">
+          ¿Están agotadas las figuras que buscas?
+        </h2>
+        <p class="sc-soldout__text">
+          ¡Buenas noticias! El SC Marketplace ya está abierto y tiene muchas
+          figuras disponibles que actualmente están agotadas aquí en
+          SkyCollex. Diferentes vendedores, pero la misma garantía SC.
+        </p>
+        <a href="#" class="sc-soldout__cta">Revisa el Mercado de SC</a>
+      </div>
+
+      <div class="sc-soldout__stats">
+        <div class="sc-soldout__stat">
+          <img src="icons/personas.webp" alt="Maestros del Portal" />
+          <div class="sc-soldout__number">7824</div>
+          <span>Maestros del Portal</span>
+        </div>
+
+        <div class="sc-soldout__stat">
+          <img src="icons/caja.webp" alt="Pedidos Procesados" />
+          <div class="sc-soldout__number">23066</div>
+          <span>Pedidos Procesados</span>
+        </div>
+
+        <div class="sc-soldout__stat">
+          <img src="icons/carrito.webp" alt="Artículos Vendidos" />
+          <div class="sc-soldout__number">146886</div>
+          <span>Artículos Vendidos</span>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="producto" class="sc-onsale">
+      <h2 class="sc-onsale__title">A la venta esta semana</h2>
+      <div class="sc-onsale__grid">
+        <div class="sc-onsale__item">
+          <img src="images/Stickers_SG.webp" alt="Full Set of Giants Stickers" />
+          <button class="sc-onsale__like">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <h3>Set completo de pegatinas de Skylanders Gigants</h3>
+          <span>23,92 €</span>
+        </div>
+
+        <div class="sc-onsale__item">
+          <img src="images/SSA_FullSet.webp" alt="Full Set of Spyro's Adventure Stickers" />
+          <button class="sc-onsale__like">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <h3>Set completo de pegatinas de Spyro's Adventure</h3>
+          <span>38,27 €</span>
+        </div>
+
+        <div class="sc-onsale__item">
+          <img src="images/SwapperHalves.webp" alt="Full Set of Swappers Stickers" />
+          <button class="sc-onsale__like">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <h3>Set completo de pegatinas Swappers</h3>
+          <span>23,92 €</span>
+        </div>
+
+        <div class="sc-onsale__item">
+          <img src="images/shroomboom.webp" alt="Shroomboom (Series 1)" />
+          <button class="sc-onsale__like">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <h3>Shroomboom (Series 1)</h3>
+          <span>1,90 €</span>
+        </div>
+
+        <div class="sc-onsale__item">
+          <img src="images/StumpSmash.webp" alt="Stump Smash (Series 1)" />
+          <button class="sc-onsale__like">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <h3>Stump Smash (Series 1)</h3>
+          <span>1,90 €</span>
+        </div>
+
+        <div class="sc-onsale__item">
+          <img src="images/StealthElf.webp" alt="Stealth Elf (Series 1)" />
+          <button class="sc-onsale__like">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <h3>Stealth Elf (Series 1)</h3>
+          <span>1,90 €</span>
+        </div>
+
+        <div class="sc-onsale__item">
+          <img src="images/DrillSergeant2.webp" alt="Drill Sergeant (Series 1)" />
+          <button class="sc-onsale__like">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <h3>Drill Sergeant (Series 1)</h3>
+          <span>1,90 €</span>
+        </div>
+
+        <div class="sc-onsale__item">
+          <img src="images/AnvilRain.webp" alt="Anvil Rain" />
+          <button class="sc-onsale__like">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <h3>Anvil Rain</h3>
+          <span>0,48 €</span>
+        </div>
+      </div>
+      <a href="figuras.html" class="sc-soldout__cta"> Ver todo</a>
+    </section>
+
+    <hr />
+
+    <section id="contacto" class="sc-help">
+      <ul class="sc-help__list">
+        <li class="sc-help__item">Comprar la mitad de un Swapper</li>
+        <li class="sc-help__item">Preguntas más frecuentes</li>
+        <li class="sc-help__item">¿Necesita ayuda?</li>
+      </ul>
+    </section>
+
+    <section class="sc-contact-form">
+      <h2>Consulta de Productos Personalizados</h2>
+      <p>
+        ¿Buscas una figura personalizada o difícil de encontrar? Déjanos tus
+        datos y te ayudamos a encontrarla.
+      </p>
+      <form id="contactForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" />
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" class="form-control" placeholder="Tu correo" />
+        <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+      </form>
+    </section>
+
+    <div class="sc-floating">
+      <a class="sc-floating__btn" aria-label="Compartir en redes sociales">
+        <i class="bi bi-share-fill"></i>
+      </a>
+
+      <div class="sc-floating__menu">
+        <a href="https://facebook.com" class="sc-floating__link" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/" class="sc-floating__link" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+
+    <a href="https://wa.me/34662408891" target="_blank" class="floating-whatsapp" aria-label="Chatea por WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <h2 class="sc-contact__title">Contacto</h2>
+    <section class="sc-contact-banners">
+      <div class="sc-contact-banners__item">Correo: info@skycollex.com</div>
+      <div class="sc-contact-banners__item">Teléfono: +34 662 40 88 91</div>
+      <div class="sc-contact-banners__item">Ubicación: Málaga, España</div>
+    </section>
+  </main>
+
+  <hr />
+
+  <footer class="sc-footer">
+    <p>&copy; 2025 SkyCollex - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
